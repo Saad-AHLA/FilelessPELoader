@@ -139,7 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="BypassMemScan.cpp" />
+    <ClCompile Include="Encrypting.cpp" />
     <ClCompile Include="FilelessPELoader.cpp" />
+    <ClCompile Include="GetRemoteData.cpp" />
+    <ClCompile Include="PELoading.cpp" />
+    <ClCompile Include="RTCore64Abuse.cpp" />
+    <ClCompile Include="Unhooking.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="BypassMemScan.h" />
+    <ClInclude Include="Commun.h" />
+    <ClInclude Include="driver.h" />
+    <ClInclude Include="Encrypting.h" />
+    <ClInclude Include="GetRemoteData.h" />
+    <ClInclude Include="PELoading.h" />
+    <ClInclude Include="RTCore64Abuse.h" />
+    <ClInclude Include="Unhooking.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

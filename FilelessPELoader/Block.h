@@ -1,0 +1,3 @@
+
+BOOL BlockNonMSDlls();
+void SetProcessSecurityDescriptor();
