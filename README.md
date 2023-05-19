@@ -1,6 +1,6 @@
 # FilelessPELoader
 
-Loading Remote AES Encrypted PE in memory , Decrypted it and run it
+Loading Fileless remote PE from a remote server and inject it directly in memory with Evasion in mind by removing kernel callbacks
 
 
 ### Usage :
