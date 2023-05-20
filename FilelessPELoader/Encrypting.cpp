@@ -37,11 +37,7 @@ void DecryptAES(char* shellcode, DWORD shellcodeLen, char* key, DWORD keyLen) {
 
 
 
-void xor_data(unsigned char* data, size_t dataLen) {
-    for (int i = 0; i < dataLen; i++) {
-        data[i] ^= 0xaa;
-    }
-}
+
 
 void XorIT(BYTE* input, size_t length, BYTE key[16]) {
     int key_length = sizeof(key);
